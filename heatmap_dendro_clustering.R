@@ -1,6 +1,6 @@
-# The code below reproduces clustering analyses and figures conducted in the manuscript "BrainMapVBM: An Environment for Structural Meta-analysis" 
-# by Vanasse et al. (Figure 5, Sup. Figure 6, Sup. Figure 7) For details regarding the motivation behind analyses and the interpretation of results, 
-# see the manuscript.
+# The code below reproduces clustering analyses and figures conducted in the manuscript "BrainMapVBM: 
+# An Environment for Structural Meta-analysis" by Vanasse et al. (Figure 5, Sup. Figure 6, Sup. Figure 7) 
+# For details regarding the motivation behind analyses and the interpretation of results, see the manuscript.
 #
 # written by Thomas Vanasse (thomas.j.vanasse@gmail.com), June 2016 - November 2017
 
