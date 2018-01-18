@@ -12,7 +12,7 @@ library(gplots)
 library(cluster)
 
 # SET WORKING DIRECTORY HERE
-setwd("/Users/thomasvanasse/Google Drive/RESEARCH/METHODS/Methods_work/SHARED_DATA/HCA/")
+setwd(".../")
 
 #upload matrix of network-disease lodings (21 networks)
 mat <- data.matrix(read.csv("data_mat.csv", header = FALSE, sep = ","))
