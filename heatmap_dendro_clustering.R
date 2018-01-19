@@ -12,7 +12,7 @@ library(RColorBrewer)
 # SET WORKING DIRECTORY HERE
 setwd(".../")
 
-#upload matrix of network-disease lodings (21 networks)
+#upload matrix of network-disease lodings (43 diseases x 21 networks)
 mat <- data.matrix(read.csv("data_mat.csv", header = FALSE, sep = ","))
 
 
