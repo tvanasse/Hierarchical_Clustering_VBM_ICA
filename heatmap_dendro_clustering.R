@@ -8,8 +8,6 @@ library(gplots)
 library(cluster)
 library(dendextend)
 library(RColorBrewer)
-library(gplots)
-library(cluster)
 
 # SET WORKING DIRECTORY HERE
 setwd(".../")
