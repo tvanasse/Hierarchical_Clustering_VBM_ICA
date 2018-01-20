@@ -10,7 +10,7 @@ library(dendextend)
 library(RColorBrewer)
 
 # set working directory
-setwd("/Users/thomasvanasse/Google Drive/RESEARCH/METHODS/Methods_work/SHARED_DATA/HCA/Hierarchical_Clustering_VBM_ICA/")
+setwd("...")
 
 # upload matrix of network-disease lodings (43 diseases x 21 networks), mat
 mat <- data.matrix(read.csv("data_mat.csv", header = FALSE, sep = ","))
