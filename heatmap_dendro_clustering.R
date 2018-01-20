@@ -131,7 +131,12 @@ heatmap.2(mat,
           RowSideColors=col_labels,
           ColSideColors=column_col_labels,
           cexRow=0.98, #font: cex = 0.2 + 1/log10(nr)
-          cexCol=1.3) # to add nice colored strips        
+          cexCol=1.3) # to add nice colored strips      
+
+
+# wilcoxon rank-sum test (psychiatric [0] vs. neurological disease [1] weights)
+mat <- data.matrix(read.csv("psychiatric_vs_neurological_rank_sum.csv", header = FALSE, sep = ","))
+wilcox.test(mat[,2]~mat[,1])
 
 #remove graphic
 dev.off()
