@@ -18,8 +18,8 @@ mat <- data.matrix(read.csv("data_mat.csv", header = FALSE, sep = ","))
 # add row/column names, icd_names & col_names
 icd_names <- read.csv("ICD_labels.csv", header = FALSE, sep=",")
 col_names <- read.csv("component_labels.csv", header = FALSE, sep=",")
-rownames(mat)<-t(icd_names)
-colnames(mat)<-t(col_names)
+rownames(mat) <- t(icd_names)
+colnames(mat) <- t(col_names)
 
 # row distance matrix, rd
 rd<-as.dist(1 - cor(t(mat), method="pearson"))
@@ -40,7 +40,7 @@ dend2<-as.dendrogram(cc)
 # create color scale of heatmap, colors
 max(mat)
 min(mat)
-colors<- c(seq(-0.05, 0.024, length.out=40),seq(0.025, 0.18,length.out=80))
+colors <- c(seq(-0.05, 0.024, length.out=40),seq(0.025, 0.18,length.out=80))
 
 #set color pallette
 qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
@@ -94,7 +94,7 @@ plot(sil_cl, main = "Silhouette of Component Clusters")
 hsilo_dis=c()
 for (i in 2:35){
   hsil <- silhouette(cutree(rc, k = i), rd)
-  hsilo_dis[i]<-summary(hsil)$avg.width
+  hsilo_dis[i] <- summary(hsil)$avg.width
   print(hsilo_dis[i])
 }
 plot(hsilo_dis, ylab = "Average Silhouette Width", 
