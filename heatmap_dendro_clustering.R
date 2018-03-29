@@ -10,7 +10,7 @@ library(dendextend)
 library(RColorBrewer)
 
 # set working directory
-setwd("...")
+setwd("path to directory")
 
 # upload matrix of network-disease lodings (43 diseases x 21 networks), mat
 mat <- data.matrix(read.csv("data_mat.csv", header = FALSE, sep = ","))
@@ -118,7 +118,7 @@ column_col_labels <- get_leaves_branches_col(dend2)
 col_labels <- col_labels[order(order.dendrogram(dend1))]
 column_col_labels <- column_col_labels[order(order.dendrogram(dend2))]
 
-# plot heatmap
+# plot heatmap w/ dendrograms
 heatmap.2(mat, 
           Rowv=dend1,
           Colv=dend2,
@@ -131,8 +131,24 @@ heatmap.2(mat,
           RowSideColors=col_labels,
           ColSideColors=column_col_labels,
           cexRow=0.98, #font: cex = 0.2 + 1/log10(nr)
-          cexCol=1.3) # to add nice colored strips      
+          cexCol=1.3) # to add nice colored strips   
 
+# plot heatmap w/o dendrograms
+heatmap.2(mat, 
+          dendrogram = 'none',
+          Rowv = FALSE,
+          Colv = FALSE,
+          breaks=colors,
+          symm=F, 
+          symkey=F, 
+          margins=c(5,18), 
+          trace="none", 
+          key = FALSE,
+          #density.info='histogram', 
+          cexRow=0.98, #font: cex = 0.2 + 1/log10(nr)
+          cexCol=1.3) 
+#export 1,100 x 800
+#export 1,300 x 800
 
 # wilcoxon rank-sum test (psychiatric [0] vs. neurological disease [1] weights)
 mat <- data.matrix(read.csv("psychiatric_vs_neurological_rank_sum.csv", header = FALSE, sep = ","))
