@@ -7,6 +7,6 @@ Published: 2 May 2018 (https://doi.org/10.1002/hbm.24078)
 ## Figures
 
 ![Figure 1](figures/heatmap_dendrogram.png)
-![Figure 2](figures/component_silhouette.tiff)
-![Figure 3](figures/disease_silhouette.tiff)
-![Figure 4](figures/gap_stat.tiff)
+![Figure 2](figures/component_silhouette.png)
+![Figure 3](figures/disease_silhouette.png)
+![Figure 4](figures/gap_stat.png)
